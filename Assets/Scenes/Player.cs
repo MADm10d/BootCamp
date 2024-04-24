@@ -41,6 +41,25 @@ public class Player : MonoBehaviour
             Debug.Log("Right was clicked");
             moveVector.x += _speed * Time.deltaTime;
         }
+
+        if(moveVector.x > 8)
+        {
+            moveVector.x = 8;
+        }
+        if (moveVector.x < -8) 
+        { 
+            moveVector.x = -8; 
+        } 
+        if (moveVector.y > 6)
+        {
+            moveVector.y = 6;
+        }
+        if (moveVector.y < -6)
+        {
+            moveVector.y = -6;
+        }
+
+
         transform.position = moveVector;
 
     moveVector.z = cameraTran.position.z;
